@@ -151,7 +151,7 @@ demo.ipynb
 
 ---
 
-# 📊 Sample Workflow
+#  Sample Workflow
 
 1. Input raw text
 2. Convert text → UTF-8 bytes
@@ -162,6 +162,51 @@ demo.ipynb
 7. Analyze compression
 
 ---
+
+#  Example Usage
+
+The tokenizer converts raw text into UTF-8 byte-level tokens and applies Byte Pair Encoding (BPE) merges to reduce token count and build an optimized vocabulary.
+
+### Input Text
+
+```text id="4j0ow2"
+Hello LLM Tokenizer! This tokenizer is built from scratch.
+```
+
+### UTF-8 Byte Tokens
+
+```text id="10t9kw"
+[72, 101, 108, 108, 111, 32, 76, 76, 77, 32, 84, 111, 107, 101, 110, 105, 122, 101, 114, 33, ...]
+```
+
+### Pair Frequency Statistics
+
+```text id="r72d4q"
+(105, 115) -> 3
+(32, 116) -> 2
+(101, 114) -> 2
+(111, 107) -> 2
+```
+
+### Most Frequent Pair
+
+```text id="0v0xjs"
+(105, 115)
+```
+
+### Compression Results
+
+```text id="jlwmj8"
+Initial token count: 61
+Final token count after merge: 57
+Compression ratio: 1.07x
+```
+
+This demonstrates how BPE reduces repeated token patterns and creates a more efficient token representation for language models.
+
+<img width="1482" height="726" alt="image" src="https://github.com/user-attachments/assets/aa69bdce-cb1c-494b-8f48-048ee1d79269" />
+
+
 
 #  Learning Outcomes
 
